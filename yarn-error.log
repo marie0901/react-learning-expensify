@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js test
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add extraxt-text-webpack-plugin@3.0.0
 
 PATH: 
   C:\Users\Maria\AppData\Local\conda\conda\envs\MyDjangoEnv;C:\Users\Maria\AppData\Local\conda\conda\envs\MyDjangoEnv\Library\mingw-w64\bin;C:\Users\Maria\AppData\Local\conda\conda\envs\MyDjangoEnv\Library\usr\bin;C:\Users\Maria\AppData\Local\conda\conda\envs\MyDjangoEnv\Library\bin;C:\Users\Maria\AppData\Local\conda\conda\envs\MyDjangoEnv\Scripts;C:\Users\Maria\AppData\Local\conda\conda\envs\MyDjangoEnv\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Java\jdk1.8.0_101\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Java\jdk1.8.0_101\bin;C:\Program Files\Git\cmd;C:\Users\Maria\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Maria\AppData\Local\Programs\Python\Python36\;C:\Users\Maria\AppData\Local\atom\bin;C:\ProgramData\Maria\atom\bin;C:\Program Files (x86)\GitHub Desktop Installer;C:\Users\Maria\AppData\Local\GitHubDesktop\bin;C:\ProgramData\Anaconda3\Scripts;C:\Users\Maria\AppData\Roaming\npm;C:\Users\Maria\AppData\Local\Yarn\bin
@@ -14,13 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: C:\Users\Maria\Desktop\React-2nd\expensify-app\package.json: Unexpected token / in JSON at position 292
-      at JSON.parse (<anonymous>)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:1130:59
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
-      at <anonymous>
+  Error: https://registry.yarnpkg.com/extraxt-text-webpack-plugin: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65656:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:134675:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:135658:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:135578:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
 
 npm manifest: 
   {
@@ -32,10 +36,10 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "serve": "live-server public/",
-      "build": "webpack",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
       "dev-server": "webpack-dev-server",
-      /* "test": "jest --config=jest.config.json" */
-      "test": "jest"
+      "test": "jest --config=jest.config.json"
     },
     "dependencies": {
       "babel-cli": "6.24.1",
@@ -66,6 +70,7 @@ npm manifest:
       "react-redux": "5.0.5",
       "react-router": "^4.3.1",
       "react-router-dom": "4.2.2",
+      "react-test-renderer": "^16.4.2",
       "redux": "3.7.2",
       "sass-loader": "6.0.6",
       "style-loader": "0.18.2",
@@ -5368,6 +5373,10 @@ Lockfile:
       object-assign "^4.1.1"
       prop-types "^15.6.0"
   
+  react-is@^16.4.2:
+    version "16.4.2"
+    resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.2.tgz#84891b56c2b6d9efdee577cc83501dfc5ecead88"
+  
   react-modal@2.2.2:
     version "2.2.2"
     resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-2.2.2.tgz#4bbf98bc506e61c446c9f57329c7a488ea7d504b"
@@ -5422,6 +5431,15 @@ Lockfile:
       path-to-regexp "^1.7.0"
       prop-types "^15.6.1"
       warning "^4.0.1"
+  
+  react-test-renderer@^16.4.2:
+    version "16.4.2"
+    resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.4.2.tgz#4e03eca9359bb3210d4373f7547d1364218ef74e"
+    dependencies:
+      fbjs "^0.8.16"
+      object-assign "^4.1.1"
+      prop-types "^15.6.0"
+      react-is "^16.4.2"
   
   react@16.0.0:
     version "16.0.0"
