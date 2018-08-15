@@ -19,11 +19,21 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(ExpenseListFilters) />,
+        <Connect(ExpensesSummary) />,
         <Connect(ExpenseList) />,
       ],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -53,11 +63,21 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(ExpenseListFilters) />,
+          <Connect(ExpensesSummary) />,
           <Connect(ExpenseList) />,
         ],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
