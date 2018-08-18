@@ -4,7 +4,9 @@ exports[`should render Header correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__unrendered__): <Header
+    startLogout={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -27,7 +29,7 @@ ShallowWrapper {
           exact={true}
           to="/"
 >
-          Go home
+          Dashboard
 </NavLink>,
         <NavLink
           activeClassName="is-active"
@@ -36,13 +38,11 @@ ShallowWrapper {
 >
           Create Expense
 </NavLink>,
-        <NavLink
-          activeClassName="is-active"
-          ariaCurrent="true"
-          to="/help"
+        <button
+          onClick={[Function]}
 >
-          Help
-</NavLink>,
+          Logout
+</button>,
       ],
     },
     "ref": null,
@@ -65,12 +65,12 @@ ShallowWrapper {
         "props": Object {
           "activeClassName": "is-active",
           "ariaCurrent": "true",
-          "children": "Go home",
+          "children": "Dashboard",
           "exact": true,
           "to": "/",
         },
         "ref": null,
-        "rendered": "Go home",
+        "rendered": "Dashboard",
         "type": [Function],
       },
       Object {
@@ -90,16 +90,14 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "activeClassName": "is-active",
-          "ariaCurrent": "true",
-          "children": "Help",
-          "to": "/help",
+          "children": "Logout",
+          "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Help",
-        "type": [Function],
+        "rendered": "Logout",
+        "type": "button",
       },
     ],
     "type": "header",
@@ -120,7 +118,7 @@ ShallowWrapper {
             exact={true}
             to="/"
 >
-            Go home
+            Dashboard
 </NavLink>,
           <NavLink
             activeClassName="is-active"
@@ -129,13 +127,11 @@ ShallowWrapper {
 >
             Create Expense
 </NavLink>,
-          <NavLink
-            activeClassName="is-active"
-            ariaCurrent="true"
-            to="/help"
+          <button
+            onClick={[Function]}
 >
-            Help
-</NavLink>,
+            Logout
+</button>,
         ],
       },
       "ref": null,
@@ -158,12 +154,12 @@ ShallowWrapper {
           "props": Object {
             "activeClassName": "is-active",
             "ariaCurrent": "true",
-            "children": "Go home",
+            "children": "Dashboard",
             "exact": true,
             "to": "/",
           },
           "ref": null,
-          "rendered": "Go home",
+          "rendered": "Dashboard",
           "type": [Function],
         },
         Object {
@@ -183,16 +179,14 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "activeClassName": "is-active",
-            "ariaCurrent": "true",
-            "children": "Help",
-            "to": "/help",
+            "children": "Logout",
+            "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Help",
-          "type": [Function],
+          "rendered": "Logout",
+          "type": "button",
         },
       ],
       "type": "header",
