@@ -18,8 +18,8 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(ExpenseListFilters) />,
         <Connect(ExpensesSummary) />,
+        <Connect(ExpenseListFilters) />,
         <Connect(ExpenseList) />,
       ],
     },
@@ -62,8 +62,8 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(ExpenseListFilters) />,
           <Connect(ExpensesSummary) />,
+          <Connect(ExpenseListFilters) />,
           <Connect(ExpenseList) />,
         ],
       },
